@@ -1,0 +1,429 @@
+/**
+ * src/styles/settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+// https://next.vuetifyjs.com/features/sass-variables/`
+// @use 'vuetify' with (
+//   $color-pack: false
+// );
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+$main: #1961e4;
+$blue-light: #e6f5ff;
+$green: #0ba57f;
+$red: #ff3d17;
+$grey: #c8d6e5;
+$d-grey: #8395a7;
+$black: #131313;
+$font-family: "Plus Jakarta Sans", sans-serif;
+
+.v-application {
+  font-family: $font-family, sans-serif !important;
+  a {
+    text-decoration: none !important;
+    cursor: pointer !important;
+    color: #1961e4;
+  }
+}
+
+.cursor {
+  cursor: pointer !important;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h3,
+h4 {
+  font-weight: 600;
+}
+
+h5,
+h6 {
+  font-weight: 500;
+}
+
+// Form input style
+.f-form {
+  .f-label {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 12px;
+
+    span {
+      color: #8395a7;
+    }
+  }
+
+  .v-input__prepend-inner {
+    margin-right: auto;
+    padding-right: 8px !important;
+  }
+
+  .v-input {
+    font-size: 14px !important;
+    border-radius: 10px;
+
+    .v-icon.v-icon {
+      font-size: 20px !important;
+    }
+  }
+}
+
+// .theme--light.v-text-field--outlined:not(.v-input--is-focused):not(
+//     .v-input--has-state
+//   )
+//   > .v-input__control
+//   > .v-input__slot
+//   fieldset {
+//   background: #f9f9fc !important;
+// }
+
+// .theme--light.v-text-field--outlined:not(.v-input--is-focused):not(
+//     .v-input--has-state
+//   )
+//   > .v-input__control
+//   > .v-input__slot
+//   fieldset {
+//   border: none !important;
+// }
+
+.v-text-field.v-text-field--solo:not(.v-text-field--solo-flat)
+  > .v-input__control
+  > .v-input__slot {
+  box-shadow: none !important;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.v-text-field--filled > .v-input__control > .v-input__slot,
+.v-text-field--full-width > .v-input__control > .v-input__slot,
+.v-text-field--outlined > .v-input__control > .v-input__slot {
+  align-items: stretch;
+  // min-height: 52px !important;
+}
+
+.v-text-field--enclosed .v-input__append-inner,
+.v-text-field--enclosed .v-input__append-outer {
+  margin-top: 14px !important;
+}
+
+// .v-application .v-form .primary--text {
+//   color: $green !important;
+//   caret-color: $green !important;
+// }
+
+// end: Form input style
+
+// Button Style
+.v-size--default {
+  height: 44px !important;
+}
+
+.table-area {
+  margin-top: 32px;
+}
+
+.total-data {
+  font-size: 14px;
+}
+
+.v-btn {
+  text-transform: none !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  letter-spacing: normal !important;
+}
+
+.v-btn.v-size--small {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+}
+
+.main-container .theme--light.v-btn.v-btn--disabled.v-btn--has-bg {
+  background-color: $grey !important;
+  color: #fff !important;
+}
+
+// end: Button Style
+
+// Color style
+.b-black {
+  background: $black !important;
+}
+
+.b-grey {
+  background: $grey !important;
+}
+
+.b-red {
+  background: $red !important;
+}
+
+.b-green {
+  background: $green !important;
+}
+
+.b-main {
+  background: $main !important;
+}
+
+.c-black {
+  color: $black !important;
+}
+
+.c-grey {
+  color: $grey !important;
+}
+
+.c-red {
+  color: $red !important;
+}
+
+.c-green {
+  color: $green !important;
+}
+
+.c-main {
+  color: $main !important;
+}
+
+.btn-black {
+  background: $black !important;
+  color: #fff !important;
+}
+
+.btn-white {
+  background: #fff !important;
+  color: $black !important;
+}
+
+.btn-white-ot {
+  background: #fff !important;
+  color: $black !important;
+  border: 1px solid #c8d6e5;
+}
+
+.btn-grey {
+  background: $grey !important;
+  color: #fff !important;
+}
+
+.btn-grey-ot {
+  background: #fff !important;
+  color: $grey !important;
+  border: 1px solid $grey;
+}
+
+.btn-d-grey {
+  background: $d-grey !important;
+  color: #fff !important;
+}
+
+.btn-d-grey-ot {
+  background: #fff !important;
+  color: $d-grey !important;
+  border: 1px solid $d-grey;
+}
+
+.btn-red {
+  background: $red !important;
+  color: #fff !important;
+}
+
+.btn-green {
+  background: $green !important;
+  color: #fff !important;
+}
+
+.btn-main {
+  background: $main !important;
+  color: #fff !important;
+}
+
+// end: Color style
+
+.v-application {
+  .alert-notif {
+    position: fixed;
+    z-index: 99999;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    padding: 8px 24px;
+    border-radius: 35px;
+    min-width: 320px;
+    text-align: center;
+    top: -120px;
+    transition: all 0.7s ease-in-out;
+    border: 1.5px solid #fff;
+  }
+
+  .alert-notif.success {
+    background: $green !important;
+    border-color: $green !important;
+    color: #fff;
+    top: 30px;
+  }
+
+  .alert-notif.danger {
+    background: $red !important;
+    color: #fff;
+    top: 30px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.content-main-area {
+  padding-top: 85px;
+  position: relative;
+  background: #fafafa;
+  min-height: 100%;
+
+  .bg-blue-ab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    background: #1961e4;
+    height: 30%;
+  }
+
+  .k-wrapping {
+    position: relative;
+    padding: 0px 30px 20px;
+  }
+}
+
+.k-dashboard {
+  display: flex;
+  flex-grow: 1;
+
+  .k-content {
+    width: calc(100% - 270px);
+    height: 100%;
+    overflow: hidden;
+    padding-left: 30px;
+
+    .k-title {
+      padding-top: 18px;
+      padding-bottom: 8px;
+      color: #fff;
+      .k-heading {
+        font-weight: 800;
+        font-size: 32px;
+      }
+      .k-desc {
+        font-size: 16px;
+      }
+    }
+
+    .k-main-content {
+      max-height: calc(100vh - 130px);
+      overflow: scroll;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .k-main-content::-webkit-scrollbar {
+      display: none;
+    }
+
+    .k-main-content {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .k-card {
+      border: 1px solid #e5e5e5;
+      padding: 30px;
+      border-radius: 5px;
+      margin-top: 20px;
+      background-color: #fff;
+
+      .k-head {
+        margin-bottom: 24px;
+
+        .k-desc {
+          font-size: 14px;
+          margin-top: 12px;
+          color: #8f8f8f;
+        }
+      }
+
+      .k-stats {
+        border: 1px solid;
+        border-radius: 10px;
+        background: rgba(60, 137, 181, 0.27);
+        padding: 20px 20px 10px;
+
+        .value {
+          font-size: 60px;
+          display: inline-block;
+          font-weight: 800;
+        }
+
+        .hint {
+          font-size: 12px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.content-modal {
+  padding: 20px;
+
+  .title-modal {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 24px;
+    color: #131313;
+  }
+
+  .list-modal {
+    .list:last-child {
+      border: none;
+    }
+    .list {
+      padding: 17px 0;
+      border-bottom: 1px solid #c8d6e5;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: #131313;
+      position: relative;
+      cursor: pointer;
+
+      .v-icon {
+        color: #131313;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .cta-modal {
+    margin-top: 25px;
+  }
+}
